@@ -1,0 +1,6 @@
+{
+	"<a target='_blank' href='http://99ko.hellojo.fr' title='CMS sans base de données' onclick='window.open(this.href);return false;'>Just using 99ko</a>" : "<a href='http://99ko.hellojo.fr' title='CMS sans base de données' onclick='window.open(this.href);return false;'>Just using 99ko</a>",
+	"Generate in " : "Généré en ",
+	"Administration" : "Administration",
+	"Back to website" : "Retour au site"
+}

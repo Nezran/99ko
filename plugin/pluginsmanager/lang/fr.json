@@ -1,0 +1,18 @@
+{
+	"Plugins management of 99ko" : "Gestion des plugins de 99ko",
+	"Plugins manager" : "Gestionnaire de plugins",
+	"Advanced configuration" : "Configuration avancée",
+	"Name" : "Nom",
+	"Description" : "Description",
+	"Priority" : "Priorité",
+	"Enable" : "Activer",
+	"An error occured while saving your modifications." : "Une erreur est survenue lors de l'enregistrement des modifications.",
+    "Version" : "Version",
+    "The changes have been saved." : "Les modifications ont été enregistrées.",
+    "Plugins are inactive" : "Des plugins sont inactifs",
+	"Plugins" : "Plugins",
+	"Advanced" : "Avancé",
+	"Clear plugins cache" : "Vider le cache plugins",
+	"Cache cleared." : "Cache vidé",
+	"Clear Cache plugin can solve a bug in your site." : "Vider le cache plugins peut résoudre un dysfonctionnement de votre site."
+}

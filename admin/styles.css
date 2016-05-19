@@ -1,0 +1,364 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* BASIC */
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #14161a;
+}
+
+body.login{
+    background: #2c313b;
+}
+
+a{
+    text-decoration: none;
+    transition: color 0.5s ease;
+    color: #14161a;
+}
+
+a:hover{
+
+}
+
+h1{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 22px;
+}
+
+h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+ul, ol{
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* TABLES */
+
+table{
+    width: 100%;
+    border-spacing : 0;
+    border-collapse : collapse;
+    border: 1px solid #e5e5e5;
+}
+
+td{
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+    padding: 15px;
+}
+
+th{
+    background: #e5e5e5;
+    text-align: left;
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* FORM */
+
+input[type=text], input[type=email], input[type=password], input[type=url], input[type=number], input[type=date]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #14161a;
+    background: #fff; 
+    box-shadow: inset rgba(0,0,0, 0.1) 0px 0px 8px;  
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    width: 100%;
+}
+
+textarea{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #14161a;
+    background: #fff; 
+    box-shadow: inset rgba(0,0,0, 0.1) 0px 0px 8px;  
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    width: 100%;
+    min-height: 250px;
+}
+
+input[type=submit], input[type=button], button, .button{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    background: #009900;
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.5s ease;
+}
+
+input[type=submit].alert, input[type=button].alert, button.alert, .button.alert{
+    background: #990000;
+}
+
+input[type=submit]:hover, input[type=button]:hover, button:hover, .button:hover{
+    background: #14161a;
+}
+
+input[type=submit].active, input[type=button].active, button.active, .button.active{
+    background: #14161a;
+}
+
+select{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #14161a;
+    background: #fff; 
+    box-shadow: inset rgba(0,0,0, 0.1) 0px 0px 8px;  
+    border: 1px solid #e5e5e5;
+    padding: 5px;
+    width: 100%;
+}
+
+/* UTIL */
+
+ul.no_bullet{
+    list-style: none inside;
+}
+
+/* TABS */
+
+ul.tabs{
+    list-style: none inside;
+    overflow: hidden;
+}
+
+ul.tabs li{
+    float: left;
+    margin-right: 5px;
+}
+
+ul.tabs a{
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ALERT */
+
+#msg p{
+    padding: 5px;
+    font-size: 12px;
+}
+
+#msg.success{
+    background: #ccffcc;
+    color: green;
+}
+
+#msg.error{
+    background: #ffcccc;
+    color: #cc3333;
+}
+
+.alert-box{
+    background: #ffff99;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.alert-box p{
+    margin: 0;
+}
+
+.alert-box .close{
+    display: none !important;
+}
+
+#alert .alert-box{
+    margin: 0;
+    border-radius: 0;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+}
+
+/* STRUCTURE */
+
+#login{
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 60px auto;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.just_using{
+    text-align: center;
+    margin-top: 60px;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+}
+
+#header{
+    width: 100%;
+    background: #14161a;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header_content{
+}
+
+#body{
+    height: 100%;
+}
+
+#sidebar{
+    width: 20%;
+    float: left;
+    padding: 15px;
+    padding-top: 60px;
+    background: #2c313b;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#content{
+    width: 70%;
+    float: left;
+    background: #fff;
+    height: 100%;
+    padding: 15px;
+    padding-top: 60px;
+}
+
+/* MENU */
+
+#header ul{
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+#header li{
+    float: left;
+}
+
+#header a{
+    color: #2c313b;
+    padding: 15px;
+    display: block;
+    transition: background 0.5s ease;
+}
+
+#header a:hover, #header a.active{
+    color: #E5E5E5;
+    background: #2c313b;
+}
+
+#sidebar h2{
+    color: #E5E5E5;
+}
+
+#navigation{
+    text-transform: uppercase;
+    list-style: none;
+    margin: 30px 0;
+    padding: 0;
+}
+
+#navigation a{
+    padding: 5px 0;
+    border-bottom: 1px solid #14161a;
+    transition: background 0.5s ease;
+}
+
+#navigation li:last-child a{
+    border-bottom: 0;
+}
+
+#sidebar a{
+    display: block;
+    color: #E5E5E5;
+    padding: 5px;
+}
+
+#sidebar a:hover{
+    background: #14161a;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 1024px){
+    
+    .just_using{
+        display: none;
+    }
+    
+    #header{
+        display: none;
+    }
+    
+    #sidebar{
+        width: 100%;
+        height: auto;
+        padding-top: 0;
+        text-align: center;
+    }
+    
+    #sidebar *{
+        font-size: 14px !important;
+    }
+    
+    #content{
+        width: 100%;
+    }
+    
+    #body{
+        height: auto;
+    }
+
+}
