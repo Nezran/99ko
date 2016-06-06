@@ -16,7 +16,7 @@
 	</tr>
   </thead>
   <tbody>
-	<?php foreach($page->getItems() as $k=>$pageItem){ ?>
+	<?php foreach($page->getItems() as $k=>$pageItem) if($pageItem->targetIs() != 'plugin' || ($pageItem->targetIs() == 'plugin' && $pluginsManager->isActivePlugin($pageItem->getTarget()))){ ?>
 	<tr>
 		<td><?php if($pageItem->getIsHomepage()){ ?><img title="<?php echo $core->lang("Homepage"); ?>" src="<?php echo PLUGINS; ?>page/other/house.png" alt="icon" /><?php } ?> 
 		    <?php if($pageItem->getIsHidden()){ ?><img title="<?php echo $core->lang("Does not appear in the menu"); ?>" src="<?php echo PLUGINS; ?>/page/other/ghost.png" alt="icon" /><?php } ?>
@@ -24,7 +24,7 @@
 			<?php if($pageItem->targetIs() == 'plugin'){ ?><img title="<?php echo $core->lang("Target : plugin"); ?>" src="<?php echo PLUGINS; ?>/page/other/plugin.png" alt="icon" /><?php } ?>
 		</td>
 		<td><?php echo $pageItem->getName(); ?></td>
-		<td><input type="text" value="<?php echo $page->makeUrl($pageItem); ?>" /></td>
+		<td><input readonly="readonly" type="text" value="<?php echo $page->makeUrl($pageItem); ?>" /></td>
 		<td>
 		  <a class="up" href="index.php?p=page&action=up&id=<?php echo $pageItem->getId(); ?>&token=<?php echo administrator::getToken(); ?>"><img src="<?php echo PLUGINS; ?>page/other/up.png" alt="icon" /></a>&nbsp;&nbsp;
 		  <a class="down" href="index.php?p=page&action=down&id=<?php echo $pageItem->getId(); ?>&token=<?php echo administrator::getToken(); ?>"><img src="<?php echo PLUGINS; ?>page/other/down.png" alt="icon" /></a>
@@ -97,10 +97,17 @@
       <label><?php echo $core->lang("Name"); ?></label><br>
       <input type="text" name="name" value="<?php echo $pageItem->getName(); ?>" required="required" />
   </p>
+  <?php if($pageItem->targetIs() == 'plugin'){ ?>
   <p>
-      <label><?php echo $core->lang("Target"); ?> (http://www.google.com)</label><br>
-      <input <?php if($pageItem->targetIs() == 'plugin'){ ?>readonly<?php } ?> type="url" name="target" value="<?php echo $pageItem->getTarget(); ?>" required="required" />
+      <label><?php echo $core->lang("Target"); ?> : <?php echo $pageItem->getTarget(); ?></label>
+      <input style="display:none;" type="text" name="target" value="<?php echo $pageItem->getTarget(); ?>" />
   </p>
+  <?php } else{ ?>
+  <p>
+      <label><?php echo $core->lang("Target"); ?></label><br>
+      <input placeholder="http://www.google.com" <?php if($pageItem->targetIs() == 'plugin'){ ?>readonly<?php } ?> type="url" name="target" value="<?php echo $pageItem->getTarget(); ?>" required="required" />
+  </p>
+  <?php } ?>
   <p>
       <label><?php echo $core->lang("Open"); ?></label><br>
 	  <select name="targetAttr">

@@ -53,11 +53,6 @@ class pluginsManager{
 		    return util::writeJsonFile($path.'config.json', $obj->getConfig());
 		}
 	}
-	
-	## Alimente la liste des plugins
-	public function loadPlugin($name){
-		$this->plugins[] = $this->createPlugin($name);
-	}
 
 	## Installe un plugin
 	public function installPlugin($name, $activate = false){

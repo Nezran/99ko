@@ -41,7 +41,7 @@
       <label><?php echo $core->lang("Theme"); ?></label><br>
       <ul class="no_bullet">
       <?php foreach($core->getThemes() as $k=>$v){ ?>
-	    <li><input type="radio" name="theme" <?php if($k == $core->getConfigVal('theme')){ ?>checked<?php } ?> value="<?php echo $k; ?>" /><a target="_blank" href="<?php echo $v['authorWebsite']; ?>"><?php echo $v['name']; ?></a></li>
+	    <li><input type="radio" name="theme" <?php if($k == $core->getConfigVal('theme')){ ?>checked<?php } ?> value="<?php echo $k; ?>" /><a target="_blank" href="<?php echo $v['authorWebsite']; ?>"><?php echo $v['name']; ?> (<?php echo $v['version']; ?>)</a></li>
 	    <?php } ?>
       </ul>	    
   </p>

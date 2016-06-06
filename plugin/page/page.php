@@ -107,8 +107,12 @@ class page{
 		}
 		// génération de la navigation
 		foreach($page->getItems() as $k=>$pageItem) if(!$pageItem->getIsHidden()){
-			$core = core::getInstance();
-			$pluginsManager->getPlugin('page')->addToNavigation($pageItem->getName(), $page->makeUrl($pageItem), $pageItem->getTargetAttr());
+			if($pageItem->targetIs() == 'plugin' && !$pluginsManager->isActivePlugin($pageItem->getTarget())){
+				// no item !
+			}
+			else{
+				$pluginsManager->getPlugin('page')->addToNavigation($pageItem->getName(), $page->makeUrl($pageItem), $pageItem->getTargetAttr());
+			}
 		}
 	}
 	

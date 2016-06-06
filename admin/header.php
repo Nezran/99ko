@@ -19,9 +19,10 @@
 		<div id="header">
 			<div id="header_content">	
 			  <ul>
-				<li><h1><a class="active" href="./"><?php echo $core->lang('Administration'); ?></a></h1></li>
+				<li><h1><a class="active" href="./"><img src="home.png" alt="<?php echo $core->lang('Administration'); ?>" /></a></h1></li>
 				<li><a target="_blank" href="../"><?php echo $core->lang('Show website'); ?></a></li>
 				<li><a href="index.php?action=logout&token=<?php echo administrator::getToken(); ?>"><?php echo $core->lang('Logout'); ?></a></li>
+				<?php eval($core->callHook('adminSecondaryMenu')); ?>
 			  </ul>
 			</div>
 		</div>
