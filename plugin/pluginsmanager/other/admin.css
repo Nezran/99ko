@@ -1,7 +1,0 @@
-.pluginsmanager-admin td .description{
-    opacity: 0;
-}
-
-.pluginsmanager-admin td:hover .description{
-    opacity: 1;
-}

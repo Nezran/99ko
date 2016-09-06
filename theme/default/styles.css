@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/css?family=PT+Sans+Narrow);
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 /* BASIC */
@@ -14,7 +15,7 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #333;
-    background: #f7f7f7;
+    background: #fff;
     margin: 0;
     padding: 0;
     position: relative;
@@ -33,6 +34,7 @@ a:hover{
 h1{
     font-size: 42px;
     font-weight: normal;
+    font-family: 'PT Sans Narrow';
     margin-top: 0;
     text-transform: uppercase;
 }
@@ -166,23 +168,16 @@ code{
 
 #container{
     width: 100%;
-    background: #fff;
-    overflow: hidden;
 }
 
 #header{
     width: 100%;
-    position: fixed;
-    background: #fff;
-    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.30);
-    z-index: 9999;
 }
 
 #header_content{
     max-width: 960px;
     margin: 0 auto;
-    padding: 0 15px;
-    overflow: hidden;
+    padding: 15px;
 }
 
 #body{
@@ -193,89 +188,68 @@ code{
 }
 
 #sidebar{
-    clear: both;
-    background: #f7f7f7;
-}
-
-#sidebar_content{
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 60px 15px;
-    overflow: hidden;
+    width: 20%;
+    float: left;
 }
 
 #content{
+    width: 70%;
+    float: right;
 }
 
 #footer{
     clear: both;
-    font-size: 14px;
-    text-align: center;
-    color: #999;
-    background: #4986b7;
-    padding: 60px 15px;
-    color: #fff;
-}
-
-#footer_content{
     max-width: 960px;
     margin: 0 auto;
-}
-
-#footer_content a{
-    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    color: #999;
 }
 
 /* MENU */
 
 #navigation{
-    display: block;
+    font-family: 'PT Sans Narrow';
+    text-transform: uppercase;
     list-style: none;
     margin: 0;
-    width: 65%;
-    font-size: 14px;
-    text-transform: uppercase;
-    overflow: hidden;
 }
 
 #navigation li{
-    float: left;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#navigation li:last-child{
+    border-bottom: none;
 }
 
 #navigation a{
     display: block;
-    color: #4986b7;
-    padding: 15px;
-    transition: all 0.5s ease;
+    color: #333;
 }
 
 #navigation a:hover{
-    background: #4986b7;
-    color: #fff;
+    color: #999;
 }
 
 #siteName{
-    display: block;
     margin: 0;
-    width: 25%;
-    float: left;
-    padding: 15px 0;
-    text-transform: uppercase;
-    font-size: 14px;
 }
 
 /* SITE NAME */
 
 #siteName a{
-    color: #4986b7;
+    color: #333;
 }
 
 /* TOP BANNER */
 
 #banner{
-    height: 450px;
+    height: 375px;
     background: url(bg.jpg) no-repeat center;
     background-size: cover;
+    box-shadow: inset 0px 0px 12px 2px rgba(0, 0, 0, 0.15);
     background-attachment: fixed;
 }
 
@@ -298,6 +272,19 @@ code{
 @media only screen and (max-width: 768px){
     
     body{
+        padding-top: 47px;
+    }
+    
+    #sidebar{
+        width: 100%;
+    }
+    
+    #content{
+        width: 100%;
+    }
+    
+    #banner{
+        height: 200px;
     }
     
     #navigation{
@@ -309,7 +296,7 @@ code{
     }
     
     #siteName{
-        display: none;
+        text-align: center;
     }
 
 }

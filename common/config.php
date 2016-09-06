@@ -18,7 +18,7 @@
  * file that was distributed with this source code.
  */
 
-define('VERSION', '3.1');
+define('VERSION', '3.0.4');
 define('COMMON',  ROOT.'common/');
 define('LANG', COMMON.'lang/');
 define('DATA', ROOT.'data/');

@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    $('#advancedConfigurationButton').click(function(){
+        if($('#advancedConfiguration').css('display') == 'none') $('#advancedConfiguration').show();
+        else $('#advancedConfiguration').hide();
+    });
+});
 function updateHtaccess(rewriteBase){
         var checked = $('#urlRewriting')[0].checked;
         if(!checked) $('#htaccess').html('Options -Indexes');

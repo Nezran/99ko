@@ -2,6 +2,9 @@
 
 <form id="configForm" method="post" action="index.php?p=configmanager&action=save" autocomplete="off">
   <?php show::adminTokenField(); ?>
+    <p>
+      <input <?php if($core->getConfigVal('hideTitles')){ ?>checked<?php } ?> type="checkbox" name="hideTitles" /> <label for="hideTitles"><?php echo $core->lang("Hide pages titles"); ?>
+  </p>
   <p>
       <label><?php echo $core->lang("Lang"); ?></label><br>
       <select name="lang">
@@ -33,9 +36,6 @@
   <p>
       <label><?php echo $core->lang("Site description"); ?></label><br>
       <input type="text" name="siteDescription" value="<?php echo $core->getConfigVal('siteDescription'); ?>" required />
-  </p>
-  <p>
-      <input <?php if($core->getConfigVal('hideTitles')){ ?>checked<?php } ?> type="checkbox" name="hideTitles" /> <label for="hideTitles"><?php echo $core->lang("Hide pages titles"); ?>
   </p>
   <p>
       <label><?php echo $core->lang("Theme"); ?></label><br>

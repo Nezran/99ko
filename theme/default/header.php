@@ -18,12 +18,16 @@
 	<div id="header">
 		<div id="header_content">
 			<p id="siteName"><a href="<?php show::siteUrl(); ?>"><?php show::siteName(); ?></a></p>
+		</div>
+		<div id="banner"></div>
+	</div>
+	<div id="body">
+		<div id="sidebar">
+			<?php eval($core->callHook('sidebar')); ?>
 			<ul id="navigation">
 				<?php show::mainNavigation(); ?>
 			</ul>
+			<?php eval($core->callHook('endSidebar')); ?>
 		</div>
-	</div>
-	<div id="banner"></div>
-	<div id="body">
 		<div id="content" class="<?php show::pluginId(); ?>">
 			<?php show::mainTitle(); ?>

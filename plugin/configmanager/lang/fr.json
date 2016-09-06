@@ -7,7 +7,7 @@
 	"Configuration management of 99ko" : "Gestion de la configuration de 99ko",
 	"The password is different from his confirmation." : "Le mot de passe est différent de sa confirmation.",
 	"An error occurred while saving the changes" : "Une erreur est survenue lors de l'enregistrement des modifications",
-	"Do not change advanced settings if you're not on what you're doing." : "Ne modifiez pas les paramètres avancés si vous n'êtes pas sur de ce que vous faites.",
+	"Do not change advanced settings if you're not on what you're doing." : "Ne modifiez pas les paramètres avancés si vous n'êtes pas sur de ce que vous faites.\nUn rafraichissement du menu sera nécessaire après l'enregistrement des modifications.",
 	"URL of the site (no trailing slash)" : "URL du site (sans slash final)",
 	"URL rewriting" : "Réécriture d'URL",
 	"Debug Mod" : "Mode débogage",

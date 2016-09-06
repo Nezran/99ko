@@ -9,7 +9,7 @@ function extrasInstall(){
 function extrasAdminHead(){
     $data = '<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">';
     $data.= '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>'."\n";
-    $data.= '<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" type="text/css" />'."\n";
+    $data.= '<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" type="text/css" />'."\n";
     echo $data;
 }
 
@@ -18,7 +18,7 @@ function extrasFrontHead(){
     $data = '<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">';
     $data.= '<meta name="generator" content="99ko CMS" />'."\n";
     $data.= '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>'."\n";
-    $data.= '<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" type="text/css" />'."\n";
+    $data.= '<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" type="text/css" />'."\n";
     echo $data;
 }
 ?>
