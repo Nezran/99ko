@@ -18,6 +18,7 @@ switch($action){
 			8 => 8,
 			9 => 9,
 		);
+		$nbPlugins = count($pluginsManager->getPlugins());
 		break;
 	case 'save':
 		if($administrator->isAuthorized()){

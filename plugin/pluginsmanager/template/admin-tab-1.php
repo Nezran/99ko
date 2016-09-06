@@ -7,3 +7,11 @@
 
 
 </form>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var temp = $('.tabs li:first-child a').html();
+    temp+= ' (<?php echo $nbPlugins; ?>)';
+    $('.tabs li:first-child a').html(temp);
+});
+</script>

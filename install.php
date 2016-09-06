@@ -28,6 +28,7 @@ include_once(COMMON.'plugin.class.php');
 include_once(COMMON.'show.class.php');
 include_once(COMMON.'administrator.class.php');
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+if($lang != 'fr') $lang = 'en';
 $core = new core($lang);
 if(file_exists(DATA. 'config.json')) die($core->lang('Config file already exist !'));
 $administrator = new administrator();

@@ -1,9 +1,0 @@
-# 3.0.4
-    - Hook adminSecondaryMenu
-    - Update : jQuery / Normalize (plugin extras)
-    - Update : SlickNav (thème)
-    - Fix : https://github.com/j84/99ko/issues/2
-    - Fix : https://github.com/j84/99ko/issues/4
-    - Fix : https://github.com/j84/99ko/issues/3
-    - Fix : https://github.com/j84/99ko/issues/1
-    - Modifications mineures (admin / plugin configuration)
