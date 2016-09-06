@@ -6,11 +6,9 @@
 	<table>
 	  <thead>
 		<tr>
-			<th style="width:30%"><?php echo $core->lang("Name"); ?></th>
-			<th style="width:50%"><?php echo $core->lang("Description"); ?></th>
-			<th style="width:3%"><?php echo $core->lang("Version"); ?></th>
-			<th style="width:3%"><?php echo $core->lang("Priority"); ?></th>
-			<th style="width:4%"><?php echo $core->lang("Enable"); ?></th>
+			<th><?php echo $core->lang("Name"); ?></th>
+			<th><?php echo $core->lang("Priority"); ?></th>
+			<th><?php echo $core->lang("Enable"); ?></th>
 		</tr>
 	  </thead>
 	  <tbody>			  	
@@ -18,11 +16,10 @@
 		<tr>
 			<td>
 				<a href="<?php echo $plugin->getInfoVal('authorWebsite'); ?>" target="_blank"><?php echo $core->lang($plugin->getInfoVal('name')); ?></a>
+				<div class="description">
+					<?php echo $core->lang($plugin->getInfoVal('description')); ?> - <?php echo $core->lang("Version"); ?> : <?php echo $plugin->getInfoVal('version'); ?>
+				</div>
 			</td>
-			<td>			
-			<?php echo $core->lang($plugin->getInfoVal('description')); ?>
-			</td>
-			<td><?php echo $plugin->getInfoVal('version'); ?></td>
 			<td><?php echo util::htmlSelect($priority, $plugin->getconfigVal('priority'), 'name="priority['.$plugin->getName().']" onchange="document.getElementById(\'pluginsmanagerForm\').submit();"'); ?></td>
 			<td>
 				<?php if(!$plugin->isRequired()){ ?>
